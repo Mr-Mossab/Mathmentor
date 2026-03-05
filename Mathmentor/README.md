@@ -183,8 +183,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 For questions, issues, or suggestions, please visit:
-- GitHub Issues: https://github.com/mathmentor/mathmentor/issues
-- Documentation: https://mathmentor.readthedocs.io
+- GitHub Issues: https://github.com/Mr-Mossab/Mathmentor/issues
 
 ## Roadmap
 
@@ -199,4 +198,5 @@ For questions, issues, or suggestions, please visit:
 ---
 
 **Made with ❤️ to help students learn mathematics better**
+
 
