@@ -1,0 +1,9 @@
+# MathMentor - No external dependencies required for core functionality
+# Only standard library modules are used
+
+# Development dependencies (optional for developers)
+pytest>=7.0.0
+pytest-cov>=3.0
+sphinx>=4.0.0
+black>=22.0.0
+flake8>=4.0.0
