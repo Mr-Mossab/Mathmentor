@@ -20,7 +20,7 @@ pip install mathmentor
 Or from source:
 
 ```bash
-git clone https://github.com/mathmentor/mathmentor.git
+git clone https://github.com/Mr-Mossab/Mathmentor.git
 cd mathmentor
 pip install -e .
 ```
@@ -199,3 +199,4 @@ For questions, issues, or suggestions, please visit:
 ---
 
 **Made with ❤️ to help students learn mathematics better**
+
