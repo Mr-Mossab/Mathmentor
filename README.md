@@ -1,2 +1,201 @@
-# Mathmentor
-New python library
+# MathMentor 🧮
+
+An interactive Python library for learning mathematics with step-by-step explanations, examples, and practice problems.
+
+## Features ✨
+
+- **Arithmetic Module**: Basic operations, percentages, powers, roots
+- **Algebra Module**: Linear & quadratic equations, polynomials, fractions
+- **Geometry Module**: Areas, volumes, shapes, Pythagorean theorem
+- **Calculus Module**: Derivatives, integrals, limits, critical points
+- **Statistics Module**: Mean, median, mode, standard deviation, correlation
+- **Learning Module**: Interactive lessons, quizzes, practice problems, study tips
+
+## Installation
+
+```bash
+pip install mathmentor
+```
+
+Or from source:
+
+```bash
+git clone https://github.com/mathmentor/mathmentor.git
+cd mathmentor
+pip install -e .
+```
+
+## Quick Start
+
+### Arithmetic
+```python
+import mathmentor as mm
+
+# Basic operations
+print(mm.add(5, 3))           # 8
+print(mm.multiply(4, 7))      # 28
+print(mm.sqrt(16))            # 4
+
+# Get detailed steps
+result = mm.ArithmeticSolver.add(5, 3)
+print(result['steps'])
+```
+
+### Algebra
+```python
+# Solve quadratic equation
+result = mm.solve_quadratic(2, 5, 3)
+print(result['result'])        # Solutions
+print(result['steps'])         # Step-by-step explanation
+```
+
+### Geometry
+```python
+# Calculate areas and volumes
+area = mm.circle_area(5)
+volume = mm.sphere_volume(3)
+
+# Get detailed explanation
+result = mm.GeometryCalculator.circle_area(5)
+print(result['steps'])
+```
+
+### Statistics
+```python
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+mean_val = mm.mean(data)
+median_val = mm.median(data)
+std_dev_val = mm.std_dev(data)
+
+# Get detailed analysis
+result = mm.StatisticsCalculator.mean(data)
+print(result['steps'])
+```
+
+### Learning
+```python
+# Learn a topic
+lesson = mm.learn("quadratic equations")
+print(lesson['content'])
+
+# Take a quiz
+quiz_result = mm.quiz("algebra")
+
+# Get practice problems
+problems = mm.practice("geometry", difficulty="medium")
+print(problems['problems'])
+
+# Get study tips
+study_tips = mm.tips("statistics")
+print(study_tips['tips'])
+```
+
+## Module Overview
+
+### Arithmetic Module
+- `add()`, `subtract()`, `multiply()`, `divide()`
+- `power()`, `sqrt()`, `cbrt()`
+- `percentage()`, `percentage_increase()`, `percentage_decrease()`
+- `average()`, `absolute_value()`
+- `distance_between_points()`
+- `gcd_calc()`, `lcm_calc()`
+
+### Algebra Module
+- `solve_linear_equation()` - Linear equations
+- `solve_quadratic_equation()` - Quadratic equations using quadratic formula
+- `solve_system_2x2()` - Systems of 2 equations with 2 unknowns
+- `factor_quadratic()` - Factor quadratic expressions
+- `expand_binomial()` - Expand (ax + b)^n
+- `simplify_fraction()`, `add_fractions()`
+- `polynomial_evaluation()` - Evaluate polynomials
+
+### Geometry Module
+#### 2D Shapes
+- `triangle_area()`, `triangle_area_heron()`
+- `rectangle_area()`, `circle_area()`, `circle_area_diameter()`
+- `parallelogram_area()`, `trapezoid_area()`, `ellipse_area()`
+
+#### 3D Shapes
+- `sphere_volume()`, `cube_volume()`, `rectangular_prism_volume()`
+- `cylinder_volume()`, `cone_volume()`, `pyramid_volume()`
+
+#### Other
+- `pythagorean_theorem()` - Right triangle hypotenuse
+- `polygon_area()` - Regular polygon area
+- `distance_3d()` - 3D distance between points
+
+### Calculus Module
+- `derivative_power_rule()` - Power rule for derivatives
+- `derivative_sum_of_terms()` - Polynomial derivatives
+- `second_derivative_power_rule()`
+- `integral_power_rule()` - Power rule for integration
+- `limit_polynomial()` - Limits of polynomials
+- `critical_points_quadratic()` - Find critical points
+- `definite_integral_polynomial()` - Area under curve
+- `numerical_derivative()` - Numerical differentiation
+- `rate_of_change()` - Average rate of change
+
+### Statistics Module
+- `mean()`, `median()`, `mode()`, `range()`
+- `variance()`, `standard_deviation()`
+- `quartiles()` - Q1, Q2, Q3, IQR
+- `z_score()` - Standardized scores
+- `correlation_coefficient()` - Pearson correlation
+- `linear_regression()` - Fit line to data
+
+### Learning Module
+- `learn(topic)` - Get interactive lessons
+- `quiz(topic)` - Take quizzes with immediate feedback
+- `practice(topic, difficulty)` - Get practice problems
+- `tips(topic)` - Get study tips and strategies
+
+Supported topics: quadratic_equations, pythagorean_theorem, linear_equations, quadratic_functions
+
+## Examples with Step-by-Step Solutions
+
+Every function returns detailed steps:
+
+```python
+result = mm.ArithmeticSolver.square_root(16)
+print("Result:", result['result'])
+print("\\nSteps:")
+for step in result['steps']:
+    print(" -", step)
+
+# Output:
+# Result: 4.0
+# 
+# Steps:
+#  - Problem: √16
+#  - Find a number that when squared equals 16
+#  - Solution: √16 = 4
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For questions, issues, or suggestions, please visit:
+- GitHub Issues: https://github.com/mathmentor/mathmentor/issues
+- Documentation: https://mathmentor.readthedocs.io
+
+## Roadmap
+
+- [ ] Add trigonometric functions
+- [ ] Add matrix operations
+- [ ] Add complex number support
+- [ ] Add graphing capabilities
+- [ ] Add interactive web interface
+- [ ] Add mobile app
+- [ ] Add more languages
+
+---
+
+**Made with ❤️ to help students learn mathematics better**
